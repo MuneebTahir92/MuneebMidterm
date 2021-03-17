@@ -5,7 +5,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.FileNotFoundException;
+import java.nio.Buffer;
 
 public class DataReader {
 
@@ -23,14 +23,13 @@ public class DataReader {
 		 * Use For Each loop/while loop/Iterator to retrieve data.
 		 */
 
-		String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
+		String textFile = "Users/muneeb/IdeaProjects/MidtermJanuary2021/src/data/self-driving-car.txt";
 
 		FileReader fr = null;
 		BufferedReader br = null;
 
-
 		try {
-			fr = new FileReader("/src/data/self-driving-car.txt");
+			fr = new FileReader(textFile);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
