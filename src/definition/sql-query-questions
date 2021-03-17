@@ -2,18 +2,28 @@ This file contains SQL questions.
 Please read the questions and answer.
 
 What is Database?
-A.
+A. A database is where large amounts of data can be stored.
 
 What is DBMS?
+Database Management System. This helps manage the retrieval and use of databases.
 What is the difference between SQL and MySQL?
+SQL is a language, while MySQL is a database.
 What is RDBMS? How is it different from DBMS?
+RDBMS is relational database management system. It is different from DBMS because the data is stored in tables to separate from different types of data.
 What are Tables and Fields?
+Fields refer to the data that go into tables.
 What is SQL?
+SQL is a language which allows someone to gather and organize their data.
 What are Constraints in SQL?
+They are used to limit the type of data that go into tables.
 What is a Primary Key?
+It identifies each record in a table.
 What is a Foreign Key?
+It prevents actions that would destroy links between links.
 What is Normalization?
+It reduces data being redundant.
 What is Denormalization?
+This is the opposite of normalization, where redundant data is added to tables.
 
 You have 2 tables given below.
 
@@ -34,13 +44,34 @@ CustomerID	   CustomerName	    CustomerPhone	     Country
 Please do the following on above Order table and Customer table:
 
 Inner Join:
+select Order.OrderID, Customer.CustomerName
+from Order
+inner join Customer on Order.CustomerID = Customer.CustomerID
+
 Left Join:
+select Order.CustomerID, Customer.Customer.CustomerID
+from Order
+left join Customer on Order.CustomerName = Customer.OrderID
+order by Order.CustomerID
+
 Right Join:
+select Order.OrderID, Customer.CustomerName, Customer.CustomerPhone
+from Order
+right join Customer on Order.OrderDate = Customer.CustomerID
+order by Order.OrderID
+
 Full Join:
+select Order.CustomerID, Customer.CustomerID
+from Order
+full outer join Customer on Order.OrderID = Customer.CustomerName
+order by Order.CustomerID
+
 
 On Customer Table, please Insert one row.
+insert into Customer(OrderID,CustomerID,OrderDate) values ('34567','56','2021-03-15');
 
 On Order Table, please Update one row.
+update Order set Country='Japan' where CustomerID='3';
 
 
 

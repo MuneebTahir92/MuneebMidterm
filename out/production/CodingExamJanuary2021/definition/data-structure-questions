@@ -1,19 +1,29 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
-A.
+A. We need data structure because we need a way to store and gather large amounts of data.
 
 
 What are the various operations that can be performed on different Data Structures?
+Data can be searched, inserted, deleted, sorted, merged.
 List out the areas in which data structures are applied extensively?
 what is an Array?
+An array is a container that holds a fixed amount of values.
 what is the difference between the Array and ArrayList?
+You must specify the number of values stored in an array, while ArrayList's size may be altered.
 what is LinkedList?
+LinkedList is like an ArrayList, but instead of storing values into an index, the values are stored in a node, which carries both data as well as the next memory address.
 How is an Array different from Linked List?
+An array is a fixed amount of indexes which only contain data, while Linked list contains a node, which stores data as well as the next memory address of the next node.
 what is queue?
+Queue is first in, first out.
 what is stack?
+Stack is first in, last out.
 what is FIFO and LIFO?
+FIFO is first in, first out.
+LIFO is last in, first out.
 what is the order of complexity?
+
 what is the best case to search an element from an array?
 what is the worst case to search an element from an array?
 what is tree in data structure?
