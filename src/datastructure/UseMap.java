@@ -30,10 +30,12 @@ public class UseMap {
 		cars.put("Toyota Models", toyotaModels);
 		cars.put("Honda Models", hondaModels);
 
+		/*
 		ListIterator<String, List<String>> it = cars.listIterator();
 		while(it.hasNext()){
 			System.out.println(it.next());
 		}
+		 */
 
 		for(Map.Entry<String, List<String>> entry: cars.entrySet()){
 			System.out.println(entry.getKey() + " ----> " + entry.getValue());
