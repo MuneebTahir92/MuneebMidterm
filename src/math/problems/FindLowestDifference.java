@@ -3,7 +3,7 @@ package math.problems;
 import java.util.Arrays;
 
 public class FindLowestDifference {
-
+/*
     public static int smallest(int[] array1, int[]array2, int m, int n){
         Arrays.sort(array1);
         Arrays.sort(array2);
@@ -38,6 +38,4 @@ public class FindLowestDifference {
         int m = array1.length;
         int n = array2.length;
 
-        System.out.println(smallest());
     }
-}
