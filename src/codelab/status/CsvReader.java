@@ -86,7 +86,7 @@ public class CsvReader {
         averageScoreOfClass = ((ali.getNumberOfExercisesSolved() + muneeb.getNumberOfExercisesSolved() + chetan.getNumberOfExercisesSolved() +
                 uddin.getNumberOfExercisesSolved() + ahmed.getNumberOfExercisesSolved() + barry.getNumberOfExercisesSolved()) / 6);
 
-        System.out.println(averageScoreOfClass);
+        System.out.println("Average score of class: " + averageScoreOfClass);
 
     }
 
