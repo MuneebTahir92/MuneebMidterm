@@ -1,5 +1,8 @@
 package math.problems;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PrimeNumber {
 
 	public static void main(String[] args) {
@@ -13,6 +16,35 @@ public class PrimeNumber {
 		 *
 		 */
 
+		List<Integer> list = new ArrayList<>();
+
+		for(int c = 2; c < 1000000; c++){
+			list = primeNumbers(c);
+		}
+		for(int d = 0; d < list.size(); d++){
+			System.out.println(list.get(d));
+		}
+
+	}
+
+	public static List<Integer> primeNumbers(int number) {
+		List<Integer> prime = new ArrayList<>();
+
+		for(int b = 2; b<number; b++){
+			if(yesOrNo(b)){
+				prime.add(b);
+			}
+		}
+		return prime;
+	}
+
+	public static boolean yesOrNo(int number){
+		for(int a = 2; a < number; a++){
+			if(number % a == 0){
+				return false;
+			}
+		}
+		return true;
 	}
 
 }
