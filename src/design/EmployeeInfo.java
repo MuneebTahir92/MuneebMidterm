@@ -2,7 +2,7 @@ package design;
 
 import java.util.Scanner;
 
-public class EmployeeInfo {
+public class EmployeeInfo extends EmployeeAbstract {
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -20,8 +20,19 @@ public class EmployeeInfo {
 	/*
 	 * declare few static and final fields and some non-static fields
 	 */
-	static String companyName;
-	
+	private static String companyName;
+	private final static String companyAddress;
+	private int numberOfEmployees;
+	private String name;
+	private int employeeId;
+	private String nameOfDepartment;
+	private int salary;
+	private int numberOfYearsWithCompany;
+	private int performanceCode;
+
+
+	public EmployeeInfo() {
+	}
 	/*
 	 * You must implement the logic for below 2 methods and 
 	 * following 2 methods are prototype as well for other methods need to be design,
@@ -33,10 +44,29 @@ public class EmployeeInfo {
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
-		
+		this.employeeId = employeeId;
 	}
+
+	public EmployeeInfo(String name) {
+		this.name = name;
+	}
+
     public EmployeeInfo(String name, int employeeId){
-		
+		this.name = name;
+		this.employeeId = employeeId;
+	}
+
+	public EmployeeInfo(String companyName, String companyAddress, int numberOfEmployees) {
+		this.companyName = companyName;
+		this.companyAddress = companyAddress;
+		this.numberOfEmployees = numberOfEmployees;
+	}
+
+	public EmployeeInfo(String name, int employeeId, String nameOfDepartment, int salary) {
+		this.name = name;
+		this.employeeId = employeeId;
+		this.nameOfDepartment = nameOfDepartment;
+		this.salary = salary;
 	}
 	
 	/*
@@ -50,6 +80,19 @@ public class EmployeeInfo {
 	public static int calculateEmployeeBonus(int numberOfYearsWithCompany, int performanceCode){
 		int total=0;
 
+		if((numberOfYearsWithCompany > 0 && numberOfYearsWithCompany <= 1) || (performanceCode > 0 && performanceCode <= 5)){
+			total = 200;
+		}else if((numberOfYearsWithCompany > 0 && numberOfYearsWithCompany <= 1) && (performanceCode >= 6 && performanceCode <= 10)){
+			total = 500;
+		}else if((numberOfYearsWithCompany > 1 && numberOfYearsWithCompany <= 2) && (performanceCode > 0 && performanceCode <= 5)){
+			total = 500;
+		}else if((numberOfYearsWithCompany > 1 && numberOfYearsWithCompany <= 2) && (performanceCode >= 6 && performanceCode <= 10)){
+			total = 800;
+		}else if((numberOfYearsWithCompany > 2) && (performanceCode > 0 && performanceCode <= 5)){
+			total = 800;
+		}else if((numberOfYearsWithCompany > 2) && (performanceCode >= 6 && performanceCode <= 10)){
+			total = 1000;
+		}
 
 
 		return total;
@@ -62,7 +105,7 @@ public class EmployeeInfo {
 	 * Hints: pension will be 5% of the salary for 1 year, 10% for 2 years with the company and so on.
 	 * 
 	 */
-	public static int calculateEmployeePension(){
+	public static int calculateEmployeePension(int salary){
 		int total=0;
 		Scanner sc  = new Scanner(System.in);
 		System.out.println("Please enter start date in format (example: May,2015): ");
@@ -75,7 +118,19 @@ public class EmployeeInfo {
         //implement numbers of year from above two dates
 		//Calculate pension
 
+		int numberOfYears = todaysDate - joiningDate;
 
+		if(numberOfYears > 0 && numberOfYears <= 1){
+			total = 5 * salary;
+		}else if(numberOfYears = 2){
+			total = 10 * salary;
+		}else if(numberOfYears = 3){
+			total = 15 * salary;
+		}else if(numberOfYears > 3){
+			total = 20 * salary;
+		}else{
+			total = 0;
+		}
 
 		return total;
 	}
