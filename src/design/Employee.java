@@ -23,4 +23,8 @@ public interface Employee {
 	//employee benefit
 	public void benefitLayout();
 
+	public void employeeDOB();
+
+	public void dateHired();
+
 }
