@@ -31,8 +31,6 @@ public class EmployeeInfo extends EmployeeAbstract {
 	private int vacationDays;
 
 
-	public EmployeeInfo() {
-	}
 	/*
 	 * You must implement the logic for below 2 methods and
 	 * following 2 methods are prototype as well for other methods need to be design,
@@ -43,6 +41,9 @@ public class EmployeeInfo extends EmployeeAbstract {
 	 * you must have multiple constructor.
 	 * Must implement below constructor.
 	 */
+
+	public EmployeeInfo() {}
+
 	public EmployeeInfo(int idNumber){
 		this.idNumber = idNumber;
 	}
@@ -74,6 +75,8 @@ public class EmployeeInfo extends EmployeeAbstract {
 
 	}
 
+	public void
+
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
 	 * Then it will return the total yearly bonus. So you need to implement the logic.
@@ -82,7 +85,7 @@ public class EmployeeInfo extends EmployeeAbstract {
 	 * So you probably need to send 2 arguments.
 	 *
 	 */
-	public static double calculateEmployeeBonus(int salary, int performanceCode){
+	public static double calculateEmployeeBonus(String name, int salary, int performanceCode){
 		double bonus=0;
 
 		if(performanceCode > 0 && performanceCode <= 3){
@@ -106,35 +109,22 @@ public class EmployeeInfo extends EmployeeAbstract {
 	 * Hints: pension will be 5% of the salary for 1 year, 10% for 2 years with the company and so on.
 	 *
 	 */
-//	public static int calculateEmployeePension(int salary){
-//		int total=0;
-//		Scanner sc  = new Scanner(System.in);
-//		System.out.println("Please enter start date in format (example: May,2015): ");
-//		String joiningDate = sc.nextLine();
-//		System.out.println("Please enter today's date in format (example: August,2017): ");
-//		String todaysDate = sc.nextLine();
-//        String convertedJoiningDate = DateConversion.convertDate(joiningDate);
-//        String convertedTodaysDate = DateConversion.convertDate(todaysDate);
-//
-//        //implement numbers of year from above two dates
-//		//Calculate pension
-//
-//		int numberOfYears = convertedTodaysDate - convertedJoiningDate;
-//
-//		if(numberOfYears > 0 && numberOfYears <= 1){
-//			total = 5 * salary;
-//		}else if(numberOfYears == 2){
-//			total = 10 * salary;
-//		}else if(numberOfYears == 3){
-//			total = 15 * salary;
-//		}else if(numberOfYears > 3){
-//			total = 20 * salary;
-//		}else{
-//			total = 0;
-//		}
-//
-//		return total;
-//	}
+	public static int calculateEmployeePension(String name, int salary){
+		int total=0;
+		Scanner sc  = new Scanner(System.in);
+		System.out.println("Please enter start date in format (example: May,2015): ");
+		String joiningDate = sc.nextLine();
+		System.out.println("Please enter today's date in format (example: August,2017): ");
+		String todaysDate = sc.nextLine();
+        String convertedJoiningDate = DateConversion.convertDate(joiningDate);
+        String convertedTodaysDate = DateConversion.convertDate(todaysDate);
+
+        //implement numbers of year from above two dates
+		//Calculate pension
+
+
+		return total;
+	}
 
 	private static class DateConversion {
 

@@ -15,7 +15,8 @@ public class FortuneEmployee {
 	 **/
 	public static void main(String[] args) {
 
-
+		EmployeeInfo one = new EmployeeInfo();
+		EmployeeInfo.calculateEmployeeBonus("John Smith",50000, 9);
 
 	}
 
