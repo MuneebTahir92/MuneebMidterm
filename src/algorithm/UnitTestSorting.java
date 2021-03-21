@@ -39,13 +39,14 @@ public class UnitTestSorting {
         }catch(Exception ex){
             ex.getMessage();
         }
-        sort.mergeSort(unSortedArray);
-        // merge sort
-        try {
-            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
-        }catch(Exception ex){
-            ex.getMessage();
-        }
+
+//        sort.mergeSort(unSortedArray);
+//        // merge sort
+//        try {
+//            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
+//        }catch(Exception ex){
+//            ex.getMessage();
+//        }
 
         sort.quickSort(unSortedArray);
         // quick sort

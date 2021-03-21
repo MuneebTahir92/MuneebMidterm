@@ -75,52 +75,52 @@ public class Sort {
     }
     
 
-    public void mergeSort(int [] array){
-        int [] list = array;
-        //implement here
-        if(array.length > 1){
-            int[] prev = left(array);
-            int[] next = right(array);
-            mergeSort(prev);
-            mergeSort(next);
-        }
-
-        public int [] prev(int [] array){
-            int num1 = array.length / 2;
-            int[] prev = new int[num1];
-            for (int i = 0; i < num1; i++) {
-                prev[i] = array[i];
-            }
-            return prev;
-        }
-
-        public static int[] next(int[] array) {
-            int num1 = array.length / 2;
-            int num2 = array.length - num1;
-            int[] next = new int[num2];
-            for (int i = 0; i < num2; i++) {
-                next[i] = array[i + num1];
-            }
-            return next;
-        }
-
-        public void merge(int[] result, int[] prev, int[] next) {
-            int num3 = 0;
-            int num4 = 0;
-
-            for (int i = 0; i < result.length; i++) {
-                if (num3 >= next.length || (num3 < prev.length && prev[num3] <= next[num4])) {
-                    result[i] = prev[num3];
-                    num3++;
-                } else {
-                    result[i] = next[num4];
-                    num4++;
-                }
-            }
-        }
-
-
-    }
+//    public void mergeSort(int [] array){
+//        int [] list = array;
+//        //implement here
+//        if(array.length > 1){
+//            int[] prev = left(array);
+//            int[] next = right(array);
+//            mergeSort(prev);
+//            mergeSort(next);
+//        }
+//
+//        public int [] prev(int [] array){
+//            int num1 = array.length / 2;
+//            int[] prev = new int[num1];
+//            for (int i = 0; i < num1; i++) {
+//                prev[i] = array[i];
+//            }
+//            return prev;
+//        }
+//
+//        public static int[] next(int[] array) {
+//            int num1 = array.length / 2;
+//            int num2 = array.length - num1;
+//            int[] next = new int[num2];
+//            for (int i = 0; i < num2; i++) {
+//                next[i] = array[i + num1];
+//            }
+//            return next;
+//        }
+//
+//        public void merge(int[] result, int[] prev, int[] next) {
+//            int num3 = 0;
+//            int num4 = 0;
+//
+//            for (int i = 0; i < result.length; i++) {
+//                if (num3 >= next.length || (num3 < prev.length && prev[num3] <= next[num4])) {
+//                    result[i] = prev[num3];
+//                    num3++;
+//                } else {
+//                    result[i] = next[num4];
+//                    num4++;
+//                }
+//            }
+//        }
+//
+//
+//    }
 
 
     public int [] quickSort(int [] array){

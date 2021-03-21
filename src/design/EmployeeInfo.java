@@ -75,7 +75,7 @@ public class EmployeeInfo extends EmployeeAbstract {
 
 	}
 
-	public void
+
 
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.

@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="10c05fa7-db16-42ac-9b1d-3872225be504" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithm/Numbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithm/Numbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithm/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithm/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithm/UnitTestSorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithm/UnitTestSorting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/design/EmployeeInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/design/EmployeeInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/design/FortuneEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/design/FortuneEmployee.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,16 +200,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/algorithm/Numbers.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

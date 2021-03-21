@@ -22,7 +22,7 @@ public class Numbers {
 
 	public static void main(String[] args) throws Exception {
 		
-		int [] num = new int[1000000];
+		int [] num = new int[10];
 		storeRandomNumbers(num);
 		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 
@@ -55,12 +55,12 @@ public class Numbers {
 		printValue(bubbleSortNumbers);
 
 		//Merge Sort
-		algo.mergeSort(num);
-		long mergeSortExecutionTime = algo.executionTime;
-		System.out.println("Total Execution Time of " + num.length + " numbers in Merge Sort take: " + insertionSortExecutionTime + " milli sec");
-		connectToSqlDB.insertDataFromArrayToSqlTable(num, "merge_sort", "SortingNumbers");
-		List<String> mergeSortNumbers = connectToSqlDB.readDataBase("merge_sort", "SortingNumbers");
-		printValue(mergeSortNumbers);
+//		algo.mergeSort(num);
+//		long mergeSortExecutionTime = algo.executionTime;
+//		System.out.println("Total Execution Time of " + num.length + " numbers in Merge Sort take: " + insertionSortExecutionTime + " milli sec");
+//		connectToSqlDB.insertDataFromArrayToSqlTable(num, "merge_sort", "SortingNumbers");
+//		List<String> mergeSortNumbers = connectToSqlDB.readDataBase("merge_sort", "SortingNumbers");
+//		printValue(mergeSortNumbers);
 
 		//Quick Sort
 		algo.quickSort(num);
@@ -114,7 +114,7 @@ public class Numbers {
 	public static void storeRandomNumbers(int [] num){
 		Random rand = new Random();
 		for(int i=0; i<num.length; i++){
-			num[i] = rand.nextInt(1000000);
+			num[i] = rand.nextInt(100);
 		}
 	}
 
