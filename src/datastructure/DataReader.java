@@ -23,7 +23,7 @@ public class DataReader {
 		 * Use For Each loop/while loop/Iterator to retrieve data.
 		 */
 
-		String textFile = "Users/muneeb/IdeaProjects/MidtermJanuary2021/src/data/self-driving-car.txt";
+		String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
 
 		FileReader fr = null;
 		BufferedReader br = null;
@@ -31,25 +31,20 @@ public class DataReader {
 		try {
 			fr = new FileReader(textFile);
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			System.out.println("Cannot find the file");
 		}
 
 		br = new BufferedReader(fr);
 
 		String data = "";
 
-		while(true){
-			try {
-				if (!((data = br.readLine()) != null)) break;
-			} catch (IOException e) {
-				e.printStackTrace();
+		try {
+			while(data == br.readLine()){
+				System.out.println(data);
 			}
-			System.out.println(data);
+		} catch (IOException e) {
+			System.out.println("Cannot read the file");
 		}
-
-
-
-
 
 	}
 
