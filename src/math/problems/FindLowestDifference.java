@@ -3,26 +3,26 @@ package math.problems;
 import java.util.Arrays;
 
 public class FindLowestDifference {
-/*
-    public static int smallest(int[] array1, int[]array2, int m, int n){
+
+    public static int smallest(int[] array1, int[] array2, int m, int n) {
         Arrays.sort(array1);
         Arrays.sort(array2);
 
-        int a=0;
-        int b=0;
+        int a = 0;
+        int b = 0;
 
         int result = Integer.MAX_VALUE;
 
-        while(a < m && b < n){
-            if(Math.abs(array1[a] < array2[b]) < result){
+        while (a < m && b < n) {
+            if (Math.abs(array1[a] < array2[b]) < result) {
                 result = (Math.abs(array1[a] < array2[b]));
             }
-                if(array1[a] < array2[b]) {
-                    a++;
-                }else{
-                    b++;
-                }
-                return result;
+            if (array1[a] < array2[b]) {
+                a++;
+            } else {
+                b++;
+            }
+            return result;
         }
     }
 
@@ -39,3 +39,4 @@ public class FindLowestDifference {
         int n = array2.length;
 
     }
+}
